@@ -1,0 +1,438 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSAppleEventsUsageDescription": {
+      "comment": "macOS permission prompt text (Info.plist NSAppleEventsUsageDescription)",
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner bittet den Finder, den Papierkorb zu entleeren, wenn du „Papierkorb entleeren“ wählst."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner asks Finder to empty the Trash when you choose Empty Trash."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner pide a Finder que vacíe la Papelera cuando eliges Vaciar la papelera."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner demande au Finder de vider la corbeille quand vous choisissez Vider la corbeille."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner meminta Finder mengosongkan Tong Sampah saat Anda memilih Kosongkan Tong Sampah."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner chiede al Finder di svuotare il Cestino quando scegli Svuota il Cestino."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "「ゴミ箱を空にする」を選択すると、1CleanerはFinderにゴミ箱を空にするよう依頼します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "휴지통 비우기를 선택하면 1Cleaner가 Finder에 휴지통을 비우도록 요청합니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner vraagt de Finder om de prullenmand te legen als je “Leeg prullenmand” kiest."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner prosi Findera o opróżnienie Kosza, gdy wybierzesz Opróżnij Kosz."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O 1Cleaner pede ao Finder para esvaziar o Lixo quando você escolhe Esvaziar Lixo."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner просит Finder очистить Корзину, когда вы выбираете «Очистить Корзину»."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "“Çöp Sepeti'ni Boşalt”ı seçtiğinizde 1Cleaner, Finder'dan Çöp Sepeti'ni boşaltmasını ister."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner просить Finder очистити Смітник, коли ви вибираєте «Очистити Смітник»."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner yêu cầu Finder dọn sạch Thùng rác khi bạn chọn Dọn sạch Thùng rác."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "当你选择“清倒废纸篓”时，1Cleaner 会请求访达清倒废纸篓。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "當你選擇「清空垃圾桶」時，1Cleaner 會請 Finder 清空垃圾桶。"
+          }
+        }
+      }
+    },
+    "NSDesktopFolderUsageDescription": {
+      "comment": "macOS permission prompt text (Info.plist NSDesktopFolderUsageDescription)",
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner sucht auf deinem Schreibtisch nach Build-Ordnern, Installationsprogrammen und großen Dateien. Ohne deine Bestätigung wird nichts entfernt."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner looks for build folders, installers and large files on your Desktop. Nothing is removed without your confirmation."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner busca carpetas de build, instaladores y archivos grandes en tu Escritorio. No se elimina nada sin tu confirmación."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner recherche des dossiers de build, des installeurs et des gros fichiers sur votre Bureau. Rien n'est supprimé sans votre confirmation."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner mencari folder build, penginstal, dan file besar di Desktop Anda. Tidak ada yang dihapus tanpa konfirmasi Anda."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner cerca cartelle di build, installer e file grandi sulla Scrivania. Non viene rimosso nulla senza la tua conferma."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleanerは、デスクトップ上のビルドフォルダ、インストーラ、大きなファイルを探します。確認なしに削除されることはありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner가 데스크탑에서 빌드 폴더, 설치 프로그램, 대용량 파일을 찾습니다. 확인 없이 삭제되는 항목은 없습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner zoekt op je bureaublad naar buildmappen, installatieprogramma's en grote bestanden. Er wordt niets verwijderd zonder je bevestiging."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner szuka folderów buildów, instalatorów i dużych plików na Biurku. Nic nie zostanie usunięte bez Twojego potwierdzenia."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O 1Cleaner procura pastas de build, instaladores e arquivos grandes na sua Mesa. Nada é removido sem a sua confirmação."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner ищет папки сборок, установщики и большие файлы на Рабочем столе. Ничего не удаляется без вашего подтверждения."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner Masaüstü'nüzde derleme klasörlerini, yükleyicileri ve büyük dosyaları arar. Onayınız olmadan hiçbir şey silinmez."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner шукає папки збірок, інсталятори й великі файли на Робочому столі. Нічого не видаляється без вашого підтвердження."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner tìm các thư mục build, trình cài đặt và tệp lớn trên Màn hình nền của bạn. Không có gì bị xóa khi chưa có xác nhận của bạn."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner 会在你的桌面上查找构建文件夹、安装包和大文件。未经你确认，不会删除任何内容。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner 會在你的桌面上尋找建置資料夾、安裝檔和大型檔案。未經你確認，不會刪除任何內容。"
+          }
+        }
+      }
+    },
+    "NSDocumentsFolderUsageDescription": {
+      "comment": "macOS permission prompt text (Info.plist NSDocumentsFolderUsageDescription)",
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner sucht in „Dokumente“ nach Build-Ordnern und großen Dateien. Ohne deine Bestätigung wird nichts entfernt."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner looks for build folders and large files in Documents. Nothing is removed without your confirmation."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner busca carpetas de build y archivos grandes en Documentos. No se elimina nada sin tu confirmación."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner recherche des dossiers de build et des gros fichiers dans Documents. Rien n'est supprimé sans votre confirmation."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner mencari folder build dan file besar di Dokumen. Tidak ada yang dihapus tanpa konfirmasi Anda."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner cerca cartelle di build e file grandi in Documenti. Non viene rimosso nulla senza la tua conferma."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleanerは、書類フォルダ内のビルドフォルダと大きなファイルを探します。確認なしに削除されることはありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner가 문서 폴더에서 빌드 폴더와 대용량 파일을 찾습니다. 확인 없이 삭제되는 항목은 없습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner zoekt in Documenten naar buildmappen en grote bestanden. Er wordt niets verwijderd zonder je bevestiging."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner szuka folderów buildów i dużych plików w Dokumentach. Nic nie zostanie usunięte bez Twojego potwierdzenia."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O 1Cleaner procura pastas de build e arquivos grandes em Documentos. Nada é removido sem a sua confirmação."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner ищет папки сборок и большие файлы в папке «Документы». Ничего не удаляется без вашего подтверждения."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner Belgeler klasöründe derleme klasörlerini ve büyük dosyaları arar. Onayınız olmadan hiçbir şey silinmez."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner шукає папки збірок і великі файли в папці «Документи». Нічого не видаляється без вашого підтвердження."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner tìm các thư mục build và tệp lớn trong Tài liệu. Không có gì bị xóa khi chưa có xác nhận của bạn."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner 会在“文稿”中查找构建文件夹和大文件。未经你确认，不会删除任何内容。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner 會在「文件」中尋找建置資料夾和大型檔案。未經你確認，不會刪除任何內容。"
+          }
+        }
+      }
+    },
+    "NSDownloadsFolderUsageDescription": {
+      "comment": "macOS permission prompt text (Info.plist NSDownloadsFolderUsageDescription)",
+      "extractionState": "manual",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner sucht in „Downloads“ nach alten Installationsprogrammen und großen Dateien. Ohne deine Bestätigung wird nichts entfernt."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner looks for old installers and large files in Downloads. Nothing is removed without your confirmation."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner busca instaladores antiguos y archivos grandes en Descargas. No se elimina nada sin tu confirmación."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner recherche d'anciens installeurs et des gros fichiers dans Téléchargements. Rien n'est supprimé sans votre confirmation."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner mencari penginstal lama dan file besar di Unduhan. Tidak ada yang dihapus tanpa konfirmasi Anda."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner cerca vecchi installer e file grandi in Download. Non viene rimosso nulla senza la tua conferma."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleanerは、ダウンロードフォルダ内の古いインストーラと大きなファイルを探します。確認なしに削除されることはありません。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner가 다운로드 폴더에서 오래된 설치 프로그램과 대용량 파일을 찾습니다. 확인 없이 삭제되는 항목은 없습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner zoekt in Downloads naar oude installatieprogramma's en grote bestanden. Er wordt niets verwijderd zonder je bevestiging."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner szuka starych instalatorów i dużych plików w folderze Pobrane rzeczy. Nic nie zostanie usunięte bez Twojego potwierdzenia."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "O 1Cleaner procura instaladores antigos e arquivos grandes em Downloads. Nada é removido sem a sua confirmação."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner ищет старые установщики и большие файлы в папке «Загрузки». Ничего не удаляется без вашего подтверждения."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner İndirilenler klasöründe eski yükleyicileri ve büyük dosyaları arar. Onayınız olmadan hiçbir şey silinmez."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner шукає старі інсталятори й великі файли в папці «Викачане». Нічого не видаляється без вашого підтвердження."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner tìm các trình cài đặt cũ và tệp lớn trong Tải về. Không có gì bị xóa khi chưa có xác nhận của bạn."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner 会在“下载”中查找旧安装包和大文件。未经你确认，不会删除任何内容。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "1Cleaner 會在「下載項目」中尋找舊的安裝檔和大型檔案。未經你確認，不會刪除任何內容。"
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}
