@@ -1,5 +1,11 @@
 # 1Cleaner for Mac — Release Notes
 
+## 1.3.3
+
+- Large Folders, in Everyday under Large Files: the folders that are big because of thousands of small files, like
+  caches, node_modules and exported image sets, with their size and file count. View only; Show in Finder opens
+  one.
+
 ## 1.3.2
 
 - JetBrains and Android Studio caches are marked Ask AI: they hold the IDE's Local History, earlier versions of

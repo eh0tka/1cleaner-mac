@@ -6,6 +6,7 @@
  "%lld files checked · %@": "%lld file checked · %@",
  "%lld files in it are tracked by git": "%lld file in it is tracked by git",
  "%lld files not committed": "%lld file not committed",
+ "%lld files, %@ in files under %@": "%lld file, %@ in files under %@",
  "%lld files, %@.": "%lld file, %@.",
  "%lld folders": "%lld folder",
  "%lld folders couldn't be read. Allow access when macOS asks, or give 1Cleaner Full Disk Access.": "%lld folder couldn't be read. Allow access when macOS asks, or give 1Cleaner Full Disk Access.",

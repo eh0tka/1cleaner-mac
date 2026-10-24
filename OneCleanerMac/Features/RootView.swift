@@ -24,6 +24,7 @@ struct RootView: View {
                 switch model.destination ?? .overview {
                 case .overview: OverviewView()
                 case .storage: StorageView()
+                case .largeFolders: LargeFoldersView()
                 case .category(let category): CategoryView(category: category)
                 case .safeList: SafeListView()
                 case .about: AboutView()

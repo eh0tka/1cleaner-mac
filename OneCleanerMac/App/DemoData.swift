@@ -412,6 +412,19 @@ enum DemoData {
                                           files: [], fileCount: count)
             }
         }
+        func large(_ path: String, _ bytes: Int64, _ count: Int, _ small: Int64, _ kind: StorageBucket?) -> StorageReport.LargeFolder {
+            StorageReport.LargeFolder(path: home + "/" + path, bytes: bytes, fileCount: count, smallBytes: small, kind: kind)
+        }
+        report.largeFolders = [
+            large("Library/Developer/Xcode/DerivedData", 18_400 * MB, 412_000, 11_900 * MB, .developer),
+            large("Developer/shop-web/node_modules", 2_860 * MB, 184_300, 2_410 * MB, .developer),
+            large("Library/Caches/com.example.notes", 1_940 * MB, 96_800, 1_720 * MB, .appData),
+            large(".npm/_cacache", 1_320 * MB, 61_400, 1_180 * MB, .developer),
+            large("Pictures/Exports/icons-2025", 860 * MB, 24_600, 860 * MB, nil),
+            large("Developer/mobile-app/node_modules", 740 * MB, 52_100, 640 * MB, .developer),
+            large("Library/Application Support/Code/User/workspaceStorage", 410 * MB, 8_900, 330 * MB, .appData),
+            large("Documents/Scans/archive", 260 * MB, 3_400, 250 * MB, nil),
+        ]
         return report
     }
 

@@ -43,6 +43,8 @@ ID and notarized by Apple. macOS 14 or later, Apple silicon and Intel. 17 langua
 ![Project builds](docs/images/projects.jpg)
 
 **Storage** shows the disk by kind of data, then folders, subfolders and the largest files. It's read-only.
+**Large Folders** (in Everyday) lists the folders that are big because of thousands of small files, like caches,
+`node_modules` and exported image sets. View only.
 
 ![Storage](docs/images/storage.jpg)
 

@@ -194,7 +194,8 @@ enum DebugLaunch {
         var summary = "Scan took \(Int(Date().timeIntervalSince(started))) s\n"
         // `-summaryOnly YES`: only summary.txt, no pictures (a locked screen can stall window captures).
         let pictures = !UserDefaults.standard.bool(forKey: "summaryOnly")
-        let destinations: [(String, SidebarDestination)] = !pictures ? [] : [("overview", .overview), ("storage", .storage)]
+        let destinations: [(String, SidebarDestination)] = !pictures ? [] : [("overview", .overview), ("storage", .storage),
+                                                                                 ("largefolders", .largeFolders)]
             + CategoryID.allCases.map { ($0.rawValue, .category($0)) } + [("safelist", .safeList), ("about", .about)]
         for (name, destination) in destinations {
             model.destination = destination
@@ -262,6 +263,11 @@ enum DebugLaunch {
                         }
                     }
                 }
+            }
+            summary += "large folders: \(report.largeFolders.count)\n"
+            for folder in report.largeFolders.prefix(30) {
+                summary += "  - \(PathDisplay.abbreviated(folder.path)) \(folder.bytes.formattedBytes), \(folder.fileCount) files, "
+                    + "small \(folder.smallBytes.formattedBytes)\(folder.kind.map { " · \($0.rawValue)" } ?? "")\n"
             }
         }
         // The Copy for AI text of the opened category's first item.

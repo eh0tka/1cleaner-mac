@@ -4,6 +4,7 @@ import Observation
 enum SidebarDestination: Hashable {
     case overview
     case storage
+    case largeFolders
     case category(CategoryID)
     case safeList
     case about
@@ -405,7 +406,23 @@ final class AppModel {
     }
 
     func startCleanup() {
-        guard let session = cleanup, session.phase == .confirming, !isDemo else { return }
+        guard let session = cleanup, session.phase == .confirming else { return }
+        #if DEBUG
+        if isDemo {
+            // The demo uses the real result sheet, but never calls a remover, scans disk or empties Trash.
+            session.freeBefore = disk?.available
+            for item in session.items {
+                session.record(item, item.removal.isPermanent ? .removed : .movedToTrash)
+                selection.remove(item.id)
+                removeFromResults(item)
+            }
+            // Files moved to Trash still occupy space. Only tool removals reclaim it immediately.
+            session.freeAfter = session.freeBefore.map { $0 + session.removedByTools }
+            session.phase = .finished
+            return
+        }
+        #endif
+        guard !isDemo else { return }
         session.phase = .running
         lastRunCleanup = session
         session.task = Task {

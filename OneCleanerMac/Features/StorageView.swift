@@ -266,7 +266,7 @@ struct StorageView: View {
     }
 }
 
-private struct UsageRow: View {
+struct UsageRow: View {
     let icon: String
     let color: Color
     let title: String

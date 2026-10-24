@@ -103,10 +103,25 @@ struct StorageReport: Sendable {
         var fileCount = 0
     }
 
+    /// A folder whose size comes from a mass of small files (`StorageAnalyzer.largeFolderSmallBytes`).
+    struct LargeFolder: Identifiable, Sendable {
+        var id: String { path }
+        let path: String
+        /// Everything inside, small files or not.
+        let bytes: Int64
+        let fileCount: Int
+        /// Files under `StorageAnalyzer.minimumListedFile` inside.
+        let smallBytes: Int64
+        /// The kind its location decides (node_modules → Developer), if any.
+        let kind: StorageBucket?
+    }
+
     var date = Date()
     var totals: [StorageBucket: Int64] = [:]
     /// Per kind, the folders holding it, largest first.
     var folders: [StorageBucket: [FolderUsage]] = [:]
+    /// Folders full of small files, largest first; nested ones are listed separately.
+    var largeFolders: [LargeFolder] = []
     var diskUsed: Int64 = 0
     var notes: [String] = []
     /// False when the report was made without Full Disk Access; Storage then offers to open the setting.
@@ -133,6 +148,12 @@ enum StorageAnalyzer {
     static let minimumListedFile: Int64 = 1_000_000
     /// Kinds whose folders are broken down into subfolders; developer and app data have too many folders.
     static let subfolderKinds: Set<StorageBucket> = [.photos, .videos, .music, .documents, .archives]
+    /// A Large Folder holds at least this much in files under `minimumListedFile`, not counting what its listed
+    /// subfolders already show, in at least `largeFolderSmallFiles` such files; and small files are at least half
+    /// of what it holds outside those subfolders (a folder big from a few large files isn't one).
+    static let largeFolderSmallBytes: Int64 = 100_000_000
+    static let largeFolderSmallFiles = 1_000
+    static let largeFoldersListed = 100
 
     static func analyze(home: String, fullDiskAccess: Bool, progress: ScanProgress) async -> StorageReport {
         var roots: [(path: String, bucket: StorageBucket?)] = [("/Applications", .apps)]
@@ -153,6 +174,7 @@ enum StorageAnalyzer {
         var folders: [StorageBucket: [String: StorageReport.FolderUsage]] = [:]
         var seenLinks = Set<Walker.FileKey>()
         for part in parts {
+            report.largeFolders += part.largeFolders
             for (bucket, bytes) in part.totals { report.totals[bucket, default: 0] += bytes }
             for (bucket, byFolder) in part.folders {
                 for (path, usage) in byFolder {
@@ -172,6 +194,7 @@ enum StorageAnalyzer {
             }
         }
         report.folders = folders.mapValues { Array($0.values.sorted { $0.bytes > $1.bytes }.prefix(200)) }
+        report.largeFolders = Array(report.largeFolders.sorted { $0.bytes > $1.bytes }.prefix(largeFoldersListed))
         if let disk = DiskSpace.current() { report.diskUsed = disk.used }
         if !fullDiskAccess {
             report.measuredWithFullDiskAccess = false
@@ -189,6 +212,7 @@ enum StorageAnalyzer {
         var folders: [StorageBucket: [String: StorageReport.FolderUsage]] = [:]
         /// Hard-linked files of this root, to count them once across roots.
         var links: [Walker.FileKey: (bucket: StorageBucket, bytes: Int64)] = [:]
+        var largeFolders: [StorageReport.LargeFolder] = []
     }
 
     struct Walker: Sendable {
@@ -201,6 +225,22 @@ enum StorageAnalyzer {
             let bucket: StorageBucket
             let group: String
             let path: String
+        }
+
+        /// One open folder of the walk, summed up when fts leaves it (`FTS_DP`).
+        struct FolderTally {
+            let path: String
+            let kind: StorageBucket?
+            /// False inside packages (an app bundle, a Photos library, ...): their insides aren't listed.
+            let listable: Bool
+            let insidePackage: Bool
+            var bytes: Int64 = 0
+            var fileCount = 0
+            var smallBytes: Int64 = 0
+            /// Files not inside an already listed subfolder.
+            var unlistedBytes: Int64 = 0
+            var unlistedSmallBytes: Int64 = 0
+            var unlistedSmallFiles = 0
         }
 
         let home: String
@@ -227,6 +267,11 @@ enum StorageAnalyzer {
         static let documentExtensions: Set<String> = [
             "pdf", "doc", "docx", "xls", "xlsx", "ppt", "pptx", "pages", "numbers", "key", "txt", "rtf", "md", "csv",
             "odt", "ods", "odp", "epub", "mobi", "djvu", "fb2",
+        ]
+        /// Folders macOS shows as one item; a Large Folder is at most the package, never a folder inside it.
+        static let packageSuffixes = [
+            ".app", ".photoslibrary", ".photolibrary", ".musiclibrary", ".tvlibrary", ".imovielibrary", ".fcpbundle",
+            ".sparsebundle", ".bundle", ".framework", ".xcarchive", ".pkg",
         ]
         static let archiveExtensions: Set<String> = [
             "zip", "dmg", "pkg", "mpkg", "iso", "xip", "rar", "7z", "tar", "gz", "tgz", "bz2", "xz", "zst",
@@ -294,6 +339,7 @@ enum StorageAnalyzer {
             // top list. Per kind: big files of one kind must not keep another kind's files out of its list.
             var listThreshold: [String: Int64] = [:]
             var seenLinks = Set<FileKey>()
+            var tallies: [FolderTally] = []
 
             guard let rootCopy = strdup(root) else { return part }
             defer { free(rootCopy) }
@@ -334,6 +380,34 @@ enum StorageAnalyzer {
                     if forced == .apps, entry.name.hasSuffix(".app"), !group.hasSuffix(".app") { group = path }
                     forcedStack.append(forced)
                     groupStack.append(group)
+                    let lower = entry.name.lowercased()
+                    let isPackage = Self.packageSuffixes.contains { lower.hasSuffix($0) }
+                    let insidePackage = tallies.last.map { $0.insidePackage } ?? false
+                    tallies.append(FolderTally(
+                        path: path, kind: forced, listable: !insidePackage && forced != .apps,
+                        insidePackage: insidePackage || isPackage
+                    ))
+                case FTS_DP:
+                    guard var tally = tallies.popLast() else { continue }
+                    if tally.listable, tally.unlistedSmallBytes >= StorageAnalyzer.largeFolderSmallBytes,
+                       tally.unlistedSmallFiles >= StorageAnalyzer.largeFolderSmallFiles,
+                       tally.unlistedSmallBytes * 2 >= tally.unlistedBytes {
+                        part.largeFolders.append(StorageReport.LargeFolder(
+                            path: tally.path, bytes: tally.bytes, fileCount: tally.fileCount,
+                            smallBytes: tally.smallBytes, kind: tally.kind
+                        ))
+                        tally.unlistedBytes = 0
+                        tally.unlistedSmallBytes = 0
+                        tally.unlistedSmallFiles = 0
+                    }
+                    if !tallies.isEmpty {
+                        tallies[tallies.count - 1].bytes += tally.bytes
+                        tallies[tallies.count - 1].fileCount += tally.fileCount
+                        tallies[tallies.count - 1].smallBytes += tally.smallBytes
+                        tallies[tallies.count - 1].unlistedBytes += tally.unlistedBytes
+                        tallies[tallies.count - 1].unlistedSmallBytes += tally.unlistedSmallBytes
+                        tallies[tallies.count - 1].unlistedSmallFiles += tally.unlistedSmallFiles
+                    }
                 case FTS_F:
                     // The parent folder is at level - 1: drop entries of sibling folders walked before this file.
                     forcedStack.removeLast(max(0, forcedStack.count - level))
@@ -344,6 +418,16 @@ enum StorageAnalyzer {
                         continue
                     }
                     let bytes = Int64(stat.st_blocks) * 512
+                    if !tallies.isEmpty {
+                        tallies[tallies.count - 1].bytes += bytes
+                        tallies[tallies.count - 1].fileCount += 1
+                        tallies[tallies.count - 1].unlistedBytes += bytes
+                        if bytes < StorageAnalyzer.minimumListedFile {
+                            tallies[tallies.count - 1].smallBytes += bytes
+                            tallies[tallies.count - 1].unlistedSmallBytes += bytes
+                            tallies[tallies.count - 1].unlistedSmallFiles += 1
+                        }
+                    }
                     let forced = forcedStack.last ?? nil
                     let bucket = forced ?? (rootBucket ?? bucket(forFileNamed: entry.name))
                     // Unclassified files inside ~/Library are app data, not the person's files.

@@ -30,6 +30,10 @@ struct SidebarView: View {
                                     .disabled(model.isScanning || model.cleanup != nil
                                         || model.result(category).state == .scanning)
                             }
+                        // View only: next to Large Files, but nothing in it is cleaned.
+                        if category == .largeFiles {
+                            largeFoldersRow.tag(SidebarDestination.largeFolders)
+                        }
                     }
                 }
             }
@@ -64,6 +68,28 @@ struct SidebarView: View {
                 Spacer()
             }
             .padding(12)
+        }
+    }
+}
+
+extension SidebarView {
+    /// Shows how many folders the last Storage analysis found, not a size: nothing here is cleaned.
+    private var largeFoldersRow: some View {
+        HStack {
+            Label {
+                Text("Large Folders")
+            } icon: {
+                Image(systemName: "folder").foregroundStyle(Theme.accent)
+            }
+            Spacer()
+            if model.isAnalyzingStorage {
+                ProgressView().controlSize(.mini)
+            } else if let count = model.storage?.largeFolders.count {
+                Text(verbatim: "\(count)")
+                    .font(.appNumber(11, weight: .medium))
+                    .foregroundStyle(Theme.secondaryText)
+                    .monospacedDigit()
+            }
         }
     }
 }

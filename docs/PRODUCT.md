@@ -140,6 +140,13 @@ bundle, a Photos library, ~/Library/Developer, node_modules, ...), then the file
 scan and from *Analyze Again*; read-only; parallel walk of the home folder and /Applications. Without Full
 Disk Access, app containers, Mail, Messages and Safari are not read and count as system data.
 
+**Large Folders**: a view-only item in the Everyday group, under Large Files, made by the same Storage walk. It
+lists folders that are big because of a mass of small files: files under 1 MB in it, not counting subfolders already
+listed, add up to 100 MB or more, number 1,000 or more, and are at least half of what it holds outside those
+subfolders. Each row: size, file count, how much the small files take, Show in Finder. A listed folder can hold
+another listed folder; folders inside packages (app bundles, Photos libraries, ...) and in /Applications aren't
+listed. The sidebar shows how many were found, not a size. Nothing can be selected or removed there.
+
 **Support and About**: the toolbar's right side always shows ♥ *Support* and ⓘ *About*.
 Support is a sheet with crypto addresses by network (Ethereum & EVM: Ethereum, Arbitrum, BNB Chain — USDT, USDC,
 ETH, BNB; Tron — USDT, TRX; Solana — USDT, USDC, SOL; TON — USDT, TON; Bitcoin — BTC), a QR code made on the Mac,

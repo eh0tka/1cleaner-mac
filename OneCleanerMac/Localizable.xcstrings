@@ -4102,6 +4102,281 @@
         }
       }
     },
+    "%lld files, %@ in files under %@": {
+      "comment": "Large Folders row: files inside and how much the small ones take",
+      "localizations": {
+        "de": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Datei, davon %@ in Dateien unter %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld Dateien, davon %@ in Dateien unter %@"
+                }
+              }
+            }
+          }
+        },
+        "en": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld file, %@ in files under %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld files, %@ in files under %@"
+                }
+              }
+            }
+          }
+        },
+        "es": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld archivo, %@ en archivos de menos de %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld archivos, %@ en archivos de menos de %@"
+                }
+              }
+            }
+          }
+        },
+        "fr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld fichier, dont %@ en fichiers de moins de %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld fichiers, dont %@ en fichiers de moins de %@"
+                }
+              }
+            }
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld file, %@ dari file di bawah %@"
+          }
+        },
+        "it": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld file, di cui %@ in file sotto %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld file, di cui %@ in file sotto %@"
+                }
+              }
+            }
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld個のファイル、そのうち%3$@未満のファイルが%2$@"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "파일 %1$lld개, 그중 %3$@ 미만 파일이 %2$@"
+          }
+        },
+        "nl": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld bestand, %@ in bestanden kleiner dan %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld bestanden, %@ in bestanden kleiner dan %@"
+                }
+              }
+            }
+          }
+        },
+        "pl": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld pliki, w tym %@ w plikach mniejszych niż %@"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld plików, w tym %@ w plikach mniejszych niż %@"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld plik, w tym %@ w plikach mniejszych niż %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld pliku, w tym %@ w plikach mniejszych niż %@"
+                }
+              }
+            }
+          }
+        },
+        "pt-BR": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld arquivo, %@ em arquivos com menos de %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld arquivos, %@ em arquivos com menos de %@"
+                }
+              }
+            }
+          }
+        },
+        "ru": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld файла, мелкие файлы (меньше %3$@) занимают %2$@"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld файлов, мелкие файлы (меньше %3$@) занимают %2$@"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld файл, мелкие файлы (меньше %3$@) занимают %2$@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%1$lld файлов, мелкие файлы (меньше %3$@) занимают %2$@"
+                }
+              }
+            }
+          }
+        },
+        "tr": {
+          "variations": {
+            "plural": {
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dosya, bunun %@ kadarı %@ altındaki dosyalarda"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld dosya, bunun %@ kadarı %@ altındaki dosyalarda"
+                }
+              }
+            }
+          }
+        },
+        "uk": {
+          "variations": {
+            "plural": {
+              "few": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld файли, з них %@ у файлах менших за %@"
+                }
+              },
+              "many": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld файлів, з них %@ у файлах менших за %@"
+                }
+              },
+              "one": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld файл, з них %@ у файлах менших за %@"
+                }
+              },
+              "other": {
+                "stringUnit": {
+                  "state": "translated",
+                  "value": "%lld файлів, з них %@ у файлах менших за %@"
+                }
+              }
+            }
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%lld tệp, %@ nằm trong các tệp dưới %@"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld 个文件，其中小于 %3$@ 的文件占 %2$@"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%1$lld 個檔案，其中小於 %3$@ 的檔案共 %2$@"
+          }
+        }
+      }
+    },
     "%lld files, %@.": {
       "localizations": {
         "de": {
@@ -28298,6 +28573,112 @@
         }
       }
     },
+    "Folders where thousands of files under %@ add up to %@ or more. A listed folder can hold another listed folder.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ordner, in denen Tausende Dateien unter %@ zusammen %@ oder mehr belegen. Ein aufgeführter Ordner kann einen weiteren aufgeführten Ordner enthalten."
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "new",
+            "value": "Folders where thousands of files under %1$@ add up to %2$@ or more. A listed folder can hold another listed folder."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carpetas donde miles de archivos de menos de %@ suman %@ o más. Una carpeta de la lista puede contener otra carpeta de la lista."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dossiers où des milliers de fichiers de moins de %@ totalisent %@ ou plus. Un dossier listé peut en contenir un autre."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folder dengan ribuan file di bawah %@ yang totalnya mencapai %@ atau lebih. Folder dalam daftar bisa berisi folder lain dalam daftar."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartelle in cui migliaia di file sotto %@ occupano in tutto %@ o più. Una cartella dell’elenco può contenerne un’altra."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@未満のファイルが数千個あり、合計が%@以上になるフォルダです。一覧のフォルダが、別の一覧のフォルダを含んでいることがあります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ 미만의 파일 수천 개가 합쳐서 %@ 이상인 폴더입니다. 목록의 폴더가 목록의 다른 폴더를 포함할 수 있습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mappen waarin duizenden bestanden kleiner dan %@ samen %@ of meer innemen. Een map in de lijst kan een andere map uit de lijst bevatten."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Foldery, w których tysiące plików mniejszych niż %@ zajmują razem %@ lub więcej. Folder z listy może zawierać inny folder z listy."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pastas em que milhares de arquivos com menos de %@ somam %@ ou mais. Uma pasta da lista pode conter outra pasta da lista."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Папки, где тысячи файлов размером меньше %@ в сумме занимают %@ или больше. Папка из списка может содержать другую папку из списка."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "%@ altındaki binlerce dosyanın toplamda %@ veya daha fazla yer kapladığı klasörler. Listedeki bir klasör, listedeki başka bir klasörü içerebilir."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Папки, де тисячі файлів менших за %@ разом займають %@ або більше. Папка зі списку може містити іншу папку зі списку."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Các thư mục mà hàng nghìn tệp dưới %@ cộng lại chiếm từ %@ trở lên. Một thư mục trong danh sách có thể chứa thư mục khác trong danh sách."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小于 %@ 的数千个文件合计达到 %@ 或以上的文件夹。列表中的文件夹可能包含另一个已列出的文件夹。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "裡面有數千個小於 %@ 的檔案、合計達 %@ 以上的資料夾。列出的資料夾可能包含另一個列出的資料夾。"
+          }
+        }
+      }
+    },
     "Folders — nothing inside is shown": {
       "localizations": {
         "de": {
@@ -32534,6 +32915,106 @@
         }
       }
     },
+    "Large Folders": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Große Ordner"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carpetas grandes"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dossiers volumineux"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Folder Besar"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cartelle grandi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大きなフォルダ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "대용량 폴더"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Grote mappen"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Duże foldery"
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pastas Grandes"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Большие папки"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Büyük Klasörler"
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Великі папки"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thư mục lớn"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大文件夹"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "大型資料夾"
+          }
+        }
+      }
+    },
     "Largest contents:": {
       "comment": "AI prompt heading above the folder's largest entries",
       "localizations": {
@@ -35250,6 +35731,106 @@
           "stringUnit": {
             "state": "translated",
             "value": "無分支"
+          }
+        }
+      }
+    },
+    "No folder full of small files was found.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kein Ordner voller kleiner Dateien gefunden."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No se encontró ninguna carpeta llena de archivos pequeños."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun dossier rempli de petits fichiers n’a été trouvé."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tidak ditemukan folder yang penuh file kecil."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Non è stata trovata nessuna cartella piena di file piccoli."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "小さなファイルでいっぱいのフォルダは見つかりませんでした。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "작은 파일로 가득한 폴더를 찾지 못했습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen map vol kleine bestanden gevonden."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nie znaleziono folderu pełnego małych plików."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma pasta cheia de arquivos pequenos foi encontrada."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Папок с множеством мелких файлов не найдено."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Küçük dosyalarla dolu bir klasör bulunamadı."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Папок, повних дрібних файлів, не знайдено."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Không tìm thấy thư mục nào chứa đầy tệp nhỏ."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到装满小文件的文件夹。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "找不到裝滿小檔案的資料夾。"
           }
         }
       }
@@ -44287,6 +44868,106 @@
         }
       }
     },
+    "See the folders that are big because of thousands of small files.": {
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sieh dir die Ordner an, die durch Tausende kleine Dateien groß geworden sind."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mira qué carpetas ocupan mucho espacio por tener miles de archivos pequeños."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Voyez les dossiers devenus volumineux à cause de milliers de petits fichiers."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lihat folder yang besar karena ribuan file kecil."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scopri quali cartelle sono grandi per via di migliaia di file piccoli."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "数千個の小さなファイルで大きくなったフォルダを確認できます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "수천 개의 작은 파일 때문에 커진 폴더를 확인하세요."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bekijk de mappen die groot zijn door duizenden kleine bestanden."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zobacz foldery, które urosły przez tysiące małych plików."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Veja as pastas que são grandes por causa de milhares de arquivos pequenos."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Посмотрите, какие папки разрослись из-за тысяч мелких файлов."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Binlerce küçük dosya nedeniyle büyüyen klasörleri görün."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Перегляньте папки, що розрослися через тисячі дрібних файлів."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Xem các thư mục lớn vì chứa hàng nghìn tệp nhỏ."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看因数千个小文件而变大的文件夹。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "查看因數千個小檔案而變大的資料夾。"
+          }
+        }
+      }
+    },
     "See what kind of data fills your disk and where it lives.": {
       "localizations": {
         "de": {
@@ -52883,6 +53564,107 @@
           "stringUnit": {
             "state": "translated",
             "value": "影片"
+          }
+        }
+      }
+    },
+    "View only: nothing here is selected or removed. Clean caches and build folders in their own sections.": {
+      "comment": "Note on the Large Folders screen",
+      "localizations": {
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nur zur Ansicht: Hier wird nichts ausgewählt oder entfernt. Caches und Build-Ordner bereinigst du in ihren eigenen Bereichen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo para ver: aquí no se selecciona ni se elimina nada. Limpia las cachés y las carpetas de builds en sus propias secciones."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lecture seule : rien n’est sélectionné ni supprimé ici. Nettoyez les caches et les dossiers de build dans leurs propres sections."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hanya untuk dilihat: tidak ada yang dipilih atau dihapus di sini. Bersihkan cache dan folder build di bagiannya masing-masing."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Solo visualizzazione: qui non si può selezionare né rimuovere nulla. Pulisci cache e cartelle di build nelle rispettive sezioni."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示のみ：ここでは何も選択・削除されません。キャッシュやビルドフォルダはそれぞれのセクションで削除してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "보기 전용입니다. 여기서는 아무것도 선택하거나 제거할 수 없습니다. 캐시와 빌드 폴더는 각 섹션에서 정리하세요."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alleen bekijken: hier wordt niets geselecteerd of verwijderd. Ruim caches en buildmappen op in hun eigen onderdelen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tylko podgląd: nic tu nie jest zaznaczane ani usuwane. Pamięć podręczną i foldery buildów czyść w ich własnych sekcjach."
+          }
+        },
+        "pt-BR": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Somente visualização: nada aqui é selecionado ou removido. Limpe caches e pastas de build em suas próprias seções."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Только просмотр: здесь ничего не выбирается и не удаляется. Кэши и сборки проектов очищайте в соответствующих разделах."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yalnızca görüntüleme: burada hiçbir şey seçilmez veya silinmez. Önbellekleri ve derleme klasörlerini kendi bölümlerinde temizleyin."
+          }
+        },
+        "uk": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Лише перегляд: тут нічого не вибирається й не видаляється. Кеші та папки збірок очищайте у відповідних розділах."
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chỉ để xem: không có mục nào ở đây được chọn hoặc xóa. Hãy dọn cache và thư mục build trong các mục riêng."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "仅供查看：这里不会选择或移除任何内容。缓存和构建文件夹请在各自的页面中清理。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "僅供檢視：這裡不會選取或移除任何項目。快取和建置資料夾請在各自的類別中清理。"
           }
         }
       }
